@@ -1,0 +1,31 @@
+<button class="btn btn-primary" (click)="myfunction()">Event Binding</button>
+<p>{{name}}</p>
+
+<!-- <input type="text" (input)="GetEvent($event)">
+<p>{{name}}</p> -->
+
+<input type="text"  (keypress)="GetEvent($event)">
+<p>{{EventType}}</p>
+
+<br>
+<label>Two Way:<input type="text" [(ngModel)]="TwoDataBinding"></label>
+{{TwoDataBinding}}
+
+<hr>
+<input type="text" [(ngModel)]="Empname">
+&nbsp;<button class="btn btn-warning" (click)="addName()" [disabled]="btnDisabled">Submit</button>
+&nbsp;<b>{{text}}</b>
+
+<hr>
+<p><b>Task using Data Binding:</b></p>
+<input type="text" [(ngModel)]="TaskName">
+&nbsp;<button class="btn btn-dark" [disabled]="TaskName===''" (click)="name=''">Reset</button>
+&nbsp;<b>{{TaskName}}</b>
+
+<ul>
+    <li *ngFor="let movie of objarray">
+        {{movie.HeroName}} - {{movie.MoviveName}}
+    </li>
+</ul>
+ 
+
